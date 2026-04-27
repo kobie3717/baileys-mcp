@@ -1,0 +1,70 @@
+{
+  "name": "whatsapp-mcp-server",
+  "version": "0.1.0",
+  "description": "First MCP server for WhatsApp. Plug Claude/Cursor/GPT into Baileys via Model Context Protocol.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "whatsapp-mcp-server": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "whatsapp",
+    "baileys",
+    "claude",
+    "cursor",
+    "anthropic",
+    "ai-tools",
+    "agent",
+    "whatsapp-bot"
+  ],
+  "author": "Kobus Wentzel <kobie@pop.co.za>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kobie3717/whatsapp-mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kobie3717/whatsapp-mcp-server/issues"
+  },
+  "homepage": "https://github.com/kobie3717/whatsapp-mcp-server#readme",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "@whiskeysockets/baileys": "^6.7.9",
+    "axios": "^1.7.9",
+    "qrcode": "^1.5.4",
+    "zod": "^3.24.1"
+  },
+  "peerDependencies": {
+    "baileys-antiban": ">=1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "baileys-antiban": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/qrcode": "^1.5.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.9"
+  }
+}

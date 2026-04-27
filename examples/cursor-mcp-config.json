@@ -1,0 +1,14 @@
+{
+  "mcp": {
+    "servers": {
+      "whatsapp": {
+        "command": "npx",
+        "args": [
+          "whatsapp-mcp-server",
+          "--auth-dir",
+          "~/.wa-mcp"
+        ]
+      }
+    }
+  }
+}
