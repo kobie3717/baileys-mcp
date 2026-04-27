@@ -4,7 +4,7 @@
       "whatsapp": {
         "command": "npx",
         "args": [
-          "whatsapp-mcp-server",
+          "baileys-mcp",
           "--auth-dir",
           "~/.wa-mcp"
         ]

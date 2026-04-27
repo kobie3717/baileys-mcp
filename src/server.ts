@@ -17,7 +17,7 @@ import { resolveJidHandler, ResolveJidInput } from './tools/resolve-jid.js'
 export async function createServer(authDir: string, withAntiban: boolean = false): Promise<Server> {
   const server = new Server(
     {
-      name: 'whatsapp-mcp-server',
+      name: 'baileys-mcp',
       version: '0.1.0'
     },
     {

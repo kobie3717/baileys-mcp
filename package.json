@@ -1,12 +1,12 @@
 {
-  "name": "whatsapp-mcp-server",
+  "name": "baileys-mcp",
   "version": "0.1.0",
-  "description": "First MCP server for WhatsApp. Plug Claude/Cursor/GPT into Baileys via Model Context Protocol.",
+  "description": "First MCP server for WhatsApp via Baileys. Plug Claude/Cursor/GPT agents into WhatsApp through Model Context Protocol.",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "whatsapp-mcp-server": "./dist/cli.js"
+    "baileys-mcp": "./dist/cli.js"
   },
   "files": [
     "dist",
@@ -33,12 +33,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kobie3717/whatsapp-mcp-server.git"
+    "url": "https://github.com/kobie3717/baileys-mcp.git"
   },
   "bugs": {
-    "url": "https://github.com/kobie3717/whatsapp-mcp-server/issues"
+    "url": "https://github.com/kobie3717/baileys-mcp/issues"
   },
-  "homepage": "https://github.com/kobie3717/whatsapp-mcp-server#readme",
+  "homepage": "https://github.com/kobie3717/baileys-mcp#readme",
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",

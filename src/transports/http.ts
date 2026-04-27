@@ -59,7 +59,7 @@ export async function runHttpTransport(
     // Health check
     if (req.url === '/health') {
       res.writeHead(200, { 'Content-Type': 'application/json' })
-      res.end(JSON.stringify({ status: 'ok', server: 'whatsapp-mcp-server' }))
+      res.end(JSON.stringify({ status: 'ok', server: 'baileys-mcp' }))
       return
     }
 

@@ -45,7 +45,7 @@ function parseArgs(): CLIArgs {
 WhatsApp MCP Server - First MCP server for WhatsApp via Baileys
 
 Usage:
-  whatsapp-mcp-server [options]
+  baileys-mcp [options]
 
 Options:
   --auth-dir <path>       Directory for WhatsApp auth state (default: ./wa-auth)
@@ -57,13 +57,13 @@ Options:
 
 Examples:
   # Stdio mode (for Claude Desktop / Cursor)
-  whatsapp-mcp-server --auth-dir ~/.wa-mcp
+  baileys-mcp --auth-dir ~/.wa-mcp
 
   # HTTP mode with API key
-  whatsapp-mcp-server --transport http --port 3001 --api-key secret123
+  baileys-mcp --transport http --port 3001 --api-key secret123
 
   # With antiban protection
-  whatsapp-mcp-server --with-antiban --auth-dir ~/.wa-mcp
+  baileys-mcp --with-antiban --auth-dir ~/.wa-mcp
         `)
         process.exit(0)
       default:

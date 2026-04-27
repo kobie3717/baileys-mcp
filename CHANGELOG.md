@@ -25,4 +25,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Comprehensive test suite (15+ tests)
 - Example configs for Claude Desktop, Cursor, Claude Code
 
-[0.1.0]: https://github.com/kobie3717/whatsapp-mcp-server/releases/tag/v0.1.0
+[0.1.0]: https://github.com/kobie3717/baileys-mcp/releases/tag/v0.1.0

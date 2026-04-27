@@ -2,7 +2,7 @@
 
 **First MCP server for WhatsApp. Plug Claude / Cursor / GPT into Baileys via Model Context Protocol.**
 
-[![npm version](https://img.shields.io/npm/v/whatsapp-mcp-server.svg)](https://www.npmjs.com/package/whatsapp-mcp-server)
+[![npm version](https://img.shields.io/npm/v/baileys-mcp.svg)](https://www.npmjs.com/package/baileys-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Why MCP Matters
@@ -20,7 +20,7 @@
 ### Installation
 
 ```bash
-npm install -g whatsapp-mcp-server
+npm install -g baileys-mcp
 ```
 
 ### Claude Desktop Setup
@@ -33,7 +33,7 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS)
     "whatsapp": {
       "command": "npx",
       "args": [
-        "whatsapp-mcp-server",
+        "baileys-mcp",
         "--auth-dir",
         "/Users/yourname/.wa-mcp"
       ]
@@ -47,7 +47,7 @@ Restart Claude Desktop. You'll now have WhatsApp tools available.
 ### Claude Code Setup
 
 ```bash
-claude mcp add whatsapp -- npx whatsapp-mcp-server --auth-dir ~/.wa-mcp
+claude mcp add whatsapp -- npx baileys-mcp --auth-dir ~/.wa-mcp
 ```
 
 ### Cursor Setup
@@ -60,7 +60,7 @@ Add to Cursor settings (`Settings > MCP`):
     "servers": {
       "whatsapp": {
         "command": "npx",
-        "args": ["whatsapp-mcp-server", "--auth-dir", "~/.wa-mcp"]
+        "args": ["baileys-mcp", "--auth-dir", "~/.wa-mcp"]
       }
     }
   }
@@ -117,7 +117,7 @@ This server optionally integrates with [baileys-antiban](https://github.com/kobi
 
 ```bash
 npm install -g baileys-antiban
-whatsapp-mcp-server --with-antiban --auth-dir ~/.wa-mcp
+baileys-mcp --with-antiban --auth-dir ~/.wa-mcp
 ```
 
 When enabled:
@@ -132,7 +132,7 @@ When enabled:
 For local AI tools (Claude Desktop, Cursor, Claude Code):
 
 ```bash
-whatsapp-mcp-server --auth-dir ~/.wa-mcp
+baileys-mcp --auth-dir ~/.wa-mcp
 ```
 
 Reads from stdin, writes to stdout. No network exposure.
@@ -142,7 +142,7 @@ Reads from stdin, writes to stdout. No network exposure.
 For remote agents or web-based tools:
 
 ```bash
-whatsapp-mcp-server --transport http --port 3001 --api-key secret123
+baileys-mcp --transport http --port 3001 --api-key secret123
 ```
 
 Connect via `http://localhost:3001/sse`. Requires `X-API-Key` header.
@@ -150,7 +150,7 @@ Connect via `http://localhost:3001/sse`. Requires `X-API-Key` header.
 ## CLI Options
 
 ```
-whatsapp-mcp-server [options]
+baileys-mcp [options]
 
 Options:
   --auth-dir <path>       Directory for WhatsApp auth state (default: ./wa-auth)
@@ -169,7 +169,7 @@ Options:
 └──────┬──────┘
        │ MCP Protocol
 ┌──────▼──────────────┐
-│ whatsapp-mcp-server │
+│ baileys-mcp │
 └──────┬──────────────┘
        │ Baileys
 ┌──────▼──────┐
@@ -186,8 +186,8 @@ Options:
 ## Development
 
 ```bash
-git clone https://github.com/kobie3717/whatsapp-mcp-server.git
-cd whatsapp-mcp-server
+git clone https://github.com/kobie3717/baileys-mcp.git
+cd baileys-mcp
 npm install
 npm run build
 npm test

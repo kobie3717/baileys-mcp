@@ -1,7 +1,7 @@
 #!/bin/bash
 # Add WhatsApp MCP server to Claude Code
 
-claude mcp add whatsapp -- npx whatsapp-mcp-server --auth-dir ~/.wa-mcp
+claude mcp add whatsapp -- npx baileys-mcp --auth-dir ~/.wa-mcp
 
 echo "WhatsApp MCP server added to Claude Code!"
 echo "You can now use tools like:"
